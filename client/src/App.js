@@ -1,15 +1,11 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import { useState } from "react";
-import Loader from "./components/Loader";
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import Home from './pages/Home'
 
 function App() {
-  const [showLoading, setShowLoading] = useState(false);
   return (
     <BrowserRouter>
-      {showLoading ? <Loader /> : null}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path='/' element={<Home/>}/>
       </Routes>
     </BrowserRouter>
   );
