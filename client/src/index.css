@@ -21,3 +21,10 @@
     background-color: #54d6bc79;
     border-radius: 4px;
 }
+
+i{
+    cursor: pointer;
+}
+i:hover{
+    color: #f5f5f5;
+}

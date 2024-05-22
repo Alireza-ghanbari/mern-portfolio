@@ -2,8 +2,10 @@ import Header from '../../components/Header'
 import About from './About'
 import Contact from './Contact'
 import Experinces from './Experinces'
+import Footer from './Footer'
 import Intro from './Intro'
 import Projects from './Projects'
+import Sider from './Sider'
 
 export default function Home() {
   return (
@@ -15,6 +17,8 @@ export default function Home() {
             <Experinces />
             <Projects />
             <Contact />
+            <Footer />
+            <Sider />
         </div>
     </div>
   )
