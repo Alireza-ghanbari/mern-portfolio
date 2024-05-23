@@ -1,31 +1,12 @@
 import { useState } from "react";
 import SectionTitle from "../../components/SectionTitle";
+import { useSelector } from "react-redux";
 
 export default function Projects() {
   const [selectedItemIndex, setSelectedItemIndex] = useState(0);
-  const projects = [
-    {
-      title: "project one",
-      image:
-        "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2022/04/web-developer-portfolio.webp",
-      description: "helooooooooooo one",
-      link: "/",
-    },
-    {
-      title: "project two",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmJrSTnEiOVzEg9pkfr3dFz4s166_XAE8XFQ&usqp=CAU",
-      description: "heloooooooooooooo two",
-      link: "/",
-    },
-    {
-      title: "project three",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGvLJOyDqTP40tXu2LdXWH0AdrGmdpFrsVD0iSfBgV4bNxioEeKRQN1ffnOg6LpXkKlzQ&usqp=CAU",
-      description: "heloooooooooooo three",
-      link: "/",
-    },
-  ];
+  const { loading, portfolioData } = useSelector((state) => state.root);
+  const { projects } = portfolioData;
+
   return (
     <div className="sm:mt-12">
       <SectionTitle title="Project" />
@@ -65,12 +46,7 @@ export default function Projects() {
             <p className="text-white">
               {projects[selectedItemIndex].description}
             </p>
-            <p className="text-white">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas
-              ullam odit ad delectus? Qui similique, veniam dolorum magnam
-              repellat nam corrupti cumque fuga, error facere deleniti
-              perspiciatis itaque, repellendus pariatur?
-            </p>
+            <a href={projects[selectedItemIndex].link} target="_blank" className="text-white underline">click to see</a>
           </div>
         </div>
       </div>

@@ -1,7 +1,10 @@
 import React from "react";
 import SectionTitle from "../../components/SectionTitle";
+import { useSelector } from "react-redux";
 
 export default function Contact() {
+  const { loading, portfolioData } = useSelector((state) => state.root);
+  const { contact } = portfolioData;
   const user = {
     name: "Alireza Ghanbari",
     age: 20,
@@ -16,10 +19,10 @@ export default function Contact() {
       <div className="flex py-10 sm:flex-col items-center justify-between">
         <div className="flex flex-col gap-1">
           <p className="text-tertiary">{"{"}</p>
-          {Object.keys(user).map((key) => (
+          {Object.keys(contact).map((key) => (
             <p className="ml-3 text-tertiary">
               <span className="text-tertiary">"{key}"</span> :  {" "}
-              <span className="text-tertiary"> "{user[key]}"</span>
+              <span className="text-tertiary"> "{contact[key]}"</span>
             </p>
           ))}
           <p className="text-tertiary">{"}"}</p>

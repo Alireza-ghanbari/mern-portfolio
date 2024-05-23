@@ -7,7 +7,7 @@ export default function Header() {
         <h1 className='text-4xl font-semibold text-white'>L</h1>
         <h1 className='text-4xl font-semibold text-tertiary'>I</h1> */}
         
-        <h1 className='text-4xl font-semibold text-white'>Ali<span className='text-tertiary'>reza </span><span className='text-secondary'>Ghanbari</span></h1>
+        <h1 className='text-4xl font-semibold text-white'>Alireza <span className='text-tertiary'>Ghanbari</span></h1>
     </div>
   )
 }

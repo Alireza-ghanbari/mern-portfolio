@@ -18,11 +18,11 @@ router.get("/get-portfolio-data", async (req, res) => {
     const projects = await Project.find();
 
     res.status(200).send({
-      intro: intros,
-      about: abouts,
+      intro: intros[0],
+      about: abouts[0],
       projects,
       experiences,
-      contact: contacts,
+      contact: contacts[0],
     });
   } catch (error) {
     res.status(500).send(error);
