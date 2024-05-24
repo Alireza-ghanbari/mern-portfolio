@@ -3,6 +3,8 @@ import { Tabs } from "antd";
 import AdminIntro from "./AdminIntro";
 import AdminAbout from "./AdminAbout";
 import { useSelector } from "react-redux";
+import Experiences from "./Experiences";
+
 const { TabPane } = Tabs;
 
 export default function Admin() {
@@ -18,6 +20,9 @@ export default function Admin() {
             </TabPane>
             <TabPane tab="About" key="2">
               <AdminAbout />
+            </TabPane>
+            <TabPane tab="Experiences" key="3">
+              <Experiences />
             </TabPane>
           </Tabs>
         </div>
