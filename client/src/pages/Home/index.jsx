@@ -9,7 +9,7 @@ import Projects from "./Projects";
 import Sider from "./Sider";
 
 export default function Home() {
-  const { loading, portfolioData } = useSelector((state) => state.root);
+  const { portfolioData } = useSelector((state) => state.root);
   return (
     <div>
       <Header />

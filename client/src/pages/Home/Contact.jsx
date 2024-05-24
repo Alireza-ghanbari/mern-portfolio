@@ -20,7 +20,7 @@ export default function Contact() {
         <div className="flex flex-col gap-1">
           <p className="text-tertiary">{"{"}</p>
           {Object.keys(contact).map((key) => (
-            <p className="ml-3 text-tertiary">
+            <p key={key} className="ml-3 text-tertiary">
               <span className="text-tertiary">"{key}"</span> :  {" "}
               <span className="text-tertiary"> "{contact[key]}"</span>
             </p>

@@ -31,7 +31,7 @@ export default function About() {
         </h1>
         <div className="flex flex-wrap gap-10 mt-5">
           {skills.map((skill, index) => (
-            <div className="border border-tertiary py-3 px-6 rounded-sm">
+            <div key={index} className="border border-tertiary py-3 px-6 rounded-sm">
               <h1 className="text-tertiary">{skill}</h1>
             </div>
           ))}
