@@ -75,7 +75,7 @@ export default function Experiences() {
         </button>
       </div>
 
-      <div className="grid grid-cols-4 gap-5">
+      <div className="grid grid-cols-4 gap-5 sm:grid-cols-1">
         {experiences.map((experience) => (
           <div className="shadow border p-5" key={experience.title}>
             <h2 className="text-2xl mb-1 textpri">{experience.period}</h2>
@@ -143,6 +143,7 @@ export default function Experiences() {
 
             <div className="flex justify-end gap-3">
               <button
+              type="button"
                 className="border border-primary text-primary px-5 py-2"
                 onClick={() => {
                   setShowAddEditModel(false);

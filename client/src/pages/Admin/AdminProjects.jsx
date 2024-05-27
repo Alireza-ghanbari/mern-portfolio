@@ -76,7 +76,7 @@ export default function AdminProjects() {
         </button>
       </div>
 
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-3 sm:grid-cols-1 gap-5">
         {projects.map((project) => (
           <div className="shadow border p-5" key={project.title}>
             <h2 className="text-2xl mb-1 textpri">{project.title}</h2>
@@ -162,6 +162,7 @@ export default function AdminProjects() {
 
             <div className="flex justify-end gap-3">
               <button
+              type="button"
                 className="border border-primary text-primary px-5 py-2"
                 onClick={() => {
                   setShowAddEditModel(false);

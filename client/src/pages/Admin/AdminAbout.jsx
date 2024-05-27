@@ -40,8 +40,8 @@ export default function AdminAbout() {
           skills: portfolioData.about.skills.join(", "),
         }}
       >
-        <Form.Item name="imgUrl" label="Iamge Url">
-          <input placeholder="Iamge Url" />
+        <Form.Item name="imgUrl" label="Image Url">
+          <input placeholder="Image Url" />
         </Form.Item>
 
         <Form.Item name="description1" label="Description One">

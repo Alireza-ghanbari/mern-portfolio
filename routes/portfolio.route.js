@@ -151,4 +151,21 @@ router.post("/delete-project", async (req, res) => {
   }
 });
 
+router.post("/update-contact", async (req, res) => {
+  try {
+    const contact = await Contact.findOneAndUpdate(
+      { _id: req.body._id },
+      req.body,
+      { new: true }
+    );
+    res.status(200).send({
+      data: contact,
+      success: true,
+      message: "Contact update successfully",
+    });
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+});
+
 export default router;
