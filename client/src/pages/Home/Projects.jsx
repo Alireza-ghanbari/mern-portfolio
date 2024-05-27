@@ -43,10 +43,11 @@ export default function Projects() {
             <h1 className="text-secondary text-xl">
               {projects[selectedItemIndex].title}
             </h1>
+            <p className="text-white tracking-widest"><span className="text-gray-500 tracking-normal">Using:</span> {projects[selectedItemIndex].technologies}</p>
             <p className="text-white">
               {projects[selectedItemIndex].description}
             </p>
-            <a href={projects[selectedItemIndex].link} target="_blank" className="text-white underline">click to see</a>
+            <a href={projects[selectedItemIndex].link} target="_blank" className="hover:text-white underline text-gray-300 transition-all duration-100">click to see</a>
           </div>
         </div>
       </div>

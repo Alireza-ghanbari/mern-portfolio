@@ -78,8 +78,8 @@ const projectSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  techolgies: {
-    type: String,
+  technologies: {
+    type: Array,
     required: true,
   },
 });
@@ -111,5 +111,5 @@ const contactSchema = new mongoose.Schema({
 export const Intro=mongoose.model("intros", introSchema)
 export const About=mongoose.model("abouts", aboutSchema)
 export const Experience=mongoose.model("experiences", experienceSchema)
-export const Project=mongoose.model("projects", introSchema)
+export const Project=mongoose.model("projects", projectSchema)
 export const Contact=mongoose.model("Contacts", contactSchema)

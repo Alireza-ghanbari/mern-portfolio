@@ -107,4 +107,48 @@ router.post("/delete-experience", async (req, res) => {
   }
 });
 
+router.post("/add-project", async (req, res) => {
+  try {
+    const project = new Project(req.body);
+    await project.save();
+    res.status(201).send({
+      data: project,
+      success: true,
+      message: "Project added successfully",
+    });
+  } catch (error) {
+    res.status(500).send(error);
+  }
+});
+
+router.post("/update-project", async (req, res) => {
+  try {
+    const project = await Project.findOneAndUpdate(
+      { _id: req.body._id },
+      req.body,
+      { new: true }
+    );
+    res.status(200).send({
+      data: project,
+      success: true,
+      message: "Project update successfully",
+    });
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+});
+
+router.post("/delete-project", async (req, res) => {
+  try {
+    const project = await Project.findOneAndDelete({ _id: req.body._id });
+    res.status(200).send({
+      data: project,
+      success: true,
+      message: "Project delete successfully",
+    });
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+});
+
 export default router;
